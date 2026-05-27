@@ -88,11 +88,18 @@ p{
     border-bottom: 1px solid rgb(228,228,228);
     padding: 10px;
 }
-.alex-image{
+/*.alex-image{
     width: 90%;
     height: 600px;
     
    
+}
+*/
+
+.alex-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
  .portfolio-btn, .contact-btn{
