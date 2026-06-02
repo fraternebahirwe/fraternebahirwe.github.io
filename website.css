@@ -68,7 +68,7 @@ body {
   align-items: center;
 }
 
-.alex-image {
+.fbi-image {
   width: 100%;
   height: 620px;
 
@@ -197,7 +197,7 @@ footer .links a:hover {
     padding: 70px 6%;
   }
 
-  .alex-image {
+  .fbi-image {
     height: 520px;
     object-fit: cover;
   }
@@ -233,7 +233,7 @@ img {
     padding: 55px 6%;
   }
 
-  .alex-image {
+  .fbi-image {
     height: auto;
     max-height: none;
     width: 100%;
