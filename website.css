@@ -1,0 +1,214 @@
+
+body { 
+    font-family: sans-serif; 
+    color: #000000d7;   
+    background-color: rgb(255, 255, 255);  
+}
+  
+.navbar {
+    display: flex; 
+    justify-content: space-between; 
+    padding: 10px 10px;   
+    align-items:center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+.menu{
+    display: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+}
+.nav-links a:hover{
+    text-decoration: underline;
+}
+
+
+.image{
+    position: relative;
+     width: 100%;
+}
+
+.passion{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    padding: 10px;
+    font-family: serif;
+
+} 
+
+h1{
+    font-size: 80px;
+}
+
+.images{
+     display: flex;
+     flex-direction: column-reverse;
+     margin-bottom: 50px;
+     
+}
+
+.btn{
+    background-color:rgb(38, 57, 74) ;
+    padding:20px;
+    width: 20%;
+    align-items : center;
+    color: rgb(255, 255, 255);
+}
+
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 60px;
+}
+
+h2,h1{
+    font-family: serif;
+}
+
+p{
+    line-height: 40px;
+} 
+
+.text{
+    border-top: 1px solid rgb(228,228,228);
+    border-bottom: 1px solid rgb(228,228,228);
+    padding: 10px;
+}
+.alex-image{
+    width: 90%;
+    height: 600px;
+   
+}
+
+ .portfolio-btn, .contact-btn{
+    padding:10px 30px;
+    background-color: rgb(255, 255, 255);
+ }
+
+.contact{
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px ;
+}
+.contact h1{
+    font-size:50px ;
+}
+.contact-btn{
+    width: fit-content;
+    padding: 15px ;
+    height:50px;
+
+}
+
+.links{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+.links a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.links a:hover{
+    text-decoration: underline;
+}
+
+footer{
+    background-color: rgb(52,50,60);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+@media screen and (max-width: 600px)  {
+    body{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .nav-links{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+        width: 10%;
+    }
+    .images{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+       
+    }
+    .passion{
+        width: 100%;
+        position: relative;
+
+    }
+    h1{
+         font-size: 3.5rem;
+    }
+    .btn{
+        width: 50%;
+    }
+   .about{
+        display: flex;
+        flex-direction: column; 
+        height: auto; /* supprime l'espace blanc entre l'image et le text */
+
+    }
+    .alex-image{
+        width: 100%;
+        height: 500px;
+        margin-top: 60px;
+        object-fit:cover;
+
+    }
+
+    .text{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-top: 40px;
+    padding: 15px;
+    
+} 
+    h2{
+    font-family: serif;
+    font-size: 2rem;
+    }
+
+    .contact{
+    flex-direction: column;
+    align-items: center;
+    }
+    .contact h1{
+        text-align: center;
+    }
+    footer{
+    flex-direction:column;
+    display: flex;
+    background-color: rgb(52,50,60);
+
+    }
+    .links, .icon{
+    flex-direction:column;
+    align-items: center;
+    padding: 15px;
+    }
+
+   
+} 
