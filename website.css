@@ -36,6 +36,12 @@ body {
   gap: 42px;
   list-style: none;
 }
+/* MENU BURGER */
+.menu {
+  display: none;
+  width: 32px;
+  cursor: pointer;
+}
 
 .nav-links a {
   color: white;
@@ -249,6 +255,14 @@ footer .links a:hover {
   .projects {
     grid-template-columns: 1fr;
   }
+  .menu {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
 }
 
 @media (max-width: 480px) {
