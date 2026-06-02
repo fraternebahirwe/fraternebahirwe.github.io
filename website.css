@@ -190,24 +190,95 @@ footer .links a:hover {
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .about {
     grid-template-columns: 1fr;
+    gap: 45px;
+    padding: 70px 6%;
+  }
+
+  .alex-image {
+    height: 520px;
+    object-fit: cover;
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .navbar,
+  footer {
+    padding: 22px 6%;
+    flex-direction: column;
+    gap: 22px;
+    text-align: center;
+  }
+
+  .nav-links,
+  footer .links {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .icon {
+    gap: 18px;
+  }
+
+  .about {
+    padding: 55px 6%;
   }
 
   .alex-image {
     height: auto;
-    max-height: 600px;
+    max-height: none;
+    width: 100%;
     object-fit: contain;
+  }
+
+  .text h2,
+  .portfolio h2 {
+    font-size: 36px;
+  }
+
+  .text p {
+    font-size: 16px;
   }
 
   .projects {
     grid-template-columns: 1fr;
   }
+}
 
-  .navbar,
-  footer {
-    flex-direction: column;
-    gap: 25px;
+@media (max-width: 480px) {
+  .logo img {
+    width: 95px;
+  }
+
+  .nav-links a,
+  footer .links a {
+    font-size: 14px;
+  }
+
+  .portfolio,
+  .about {
+    padding: 45px 5%;
+  }
+
+  .text {
+    padding: 28px 0;
+  }
+
+  .text h2,
+  .portfolio h2 {
+    font-size: 30px;
+  }
+
+  .project-card {
+    padding: 22px;
   }
 }
