@@ -6,6 +6,7 @@
 
 img {
   max-width: 100%;
+  display: block;
 }
 
 body {
@@ -27,7 +28,6 @@ body {
 .logo img {
   width: 120px;
   height: auto;
-  display: block;
 }
 
 .nav-links {
@@ -73,12 +73,10 @@ body {
 .fbi-image,
 .alex-image {
   width: 100%;
-  max-width: 520px;
+  max-width: 500px;
   height: auto;
-  max-height: 620px;
   object-fit: contain;
-  object-position: center top;
-  display: block;
+  object-position: center center;
   margin: 0 auto;
 }
 
@@ -131,7 +129,7 @@ body {
   background: white;
   padding: 30px;
   border-radius: 18px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
 }
 
@@ -192,7 +190,7 @@ footer .links a:hover {
   color: #38bdf8;
 }
 
-/* RESPONSIVE TABLET */
+/* TABLET */
 @media (max-width: 1024px) {
   .about {
     grid-template-columns: 1fr;
@@ -202,9 +200,7 @@ footer .links a:hover {
 
   .fbi-image,
   .alex-image {
-    width: 100%;
     max-width: 450px;
-    height: auto;
   }
 
   .projects {
@@ -212,7 +208,7 @@ footer .links a:hover {
   }
 }
 
-/* RESPONSIVE MOBILE */
+/* MOBILE */
 @media (max-width: 768px) {
   .navbar,
   footer {
@@ -238,10 +234,7 @@ footer .links a:hover {
 
   .fbi-image,
   .alex-image {
-    width: 100%;
     max-width: 350px;
-    height: auto;
-    object-fit: contain;
   }
 
   .text h2,
