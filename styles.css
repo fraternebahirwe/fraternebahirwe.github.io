@@ -955,7 +955,7 @@ body.light-mode .copy{
     left: 0;
     right: 0;
     width: 100vw;
-    background: #0a0a0a;
+    background:var(--primary-color);
     z-index: 99;
     overflow: hidden;
     max-height: 0;
