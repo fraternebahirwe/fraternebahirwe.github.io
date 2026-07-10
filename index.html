@@ -1,71 +1,132 @@
+
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">  
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Personal website</title>
-        <link href="website.css" rel="stylesheet">
-  </head>
-<body>
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal website</title>
+    <link href="website.css" rel="stylesheet">
+</head>
+
+<body id="home">
+
     <nav class="navbar">
         <div class="logo">
-            <img src="cvlog.png" alt="Logo">
+            <img src="images/cvlog.png" alt="Logo">
         </div>
-        <img src="menu-burger.png" class="menu" alt="menu-burger">  
+
+        <img src="images/menu-burger.png" class="menu" alt="menu-burger">  
+
         <ul class="nav-links">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">PORTFOLIO</a></li>
-            <li><a href="#contact_me">CONTACT ME</a></li>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="mailto:fraterne2023@gmail.com">CONTACT ME</a></li>
         </ul>
     </nav>
-    <div class="images">
-        <img src="img.png" class="image" alt="web image">
+
+    <header class="images">
+        <img src="images/img.png" class="image" alt="web image">
+
         <div class="passion">
-            <h1>Hey , I'm Fraterne bahirwe and i love building beautiful websites</h1>
-            <button class="btn"> ABOUT ME</button>
+            <h1>Hey, I'm Fraterne Bahirwe and I love building beautiful websites</h1>
+            <a href="#about" class="btn">ABOUT ME</a>
         </div>
-    </div>
-    <div class="about">
-        <img src="alex.png" class="alex-image" alt="alex">
+    </header>
+
+    <section class="about" id="about">
+        <img src="images/fbi.png" class="alex-image" alt="Fraterne Bahirwe">
         <div class="text">
             <h2>About Me</h2>
-            <p>I'm a Fraterne front-end developer looking for a new role in an exciting company. 
-                I focus on writing accessible HTML, using modern CSS practices and writing clean JavaScript. 
-                When writing JavaScript code, I mostly use React, but can adapt to whatever tools are required. 
-                I'm based in London, UK, but I'm happy working remotely and have experience in remote teams.
-                When I'm not coding, you'll find me outdoors.
-                I love being out in nature whether that's going for a walk, run or cycling. I'd love you to check out my work.
-                As a Junior Front-End Developer at [Company Name], I was integrated into the technical team to contribute to the development of [Project Name]. 
-                My primary objective was to bridge the gap between creative design and technical implementation. Working in an Agile/Scrum environment, I focused on building high-performance, 
-                user-centric interfaces while ensuring code maintainability and scalability.
-                I'm a Fraterne front-end developer looking for a new role in an exciting company. 
-                I focus on writing accessible HTML, using modern CSS practices and writing clean JavaScript. 
-                When writing JavaScript code, I mostly use React, but can adapt to whatever tools are required. 
-                I'm based in London, UK, but I'm happy working remotely and have experience in remote teams.
-                When I'm not coding, you'll find me outdoors.
-                
+
+            <p>
+                I am a passionate junior front-end developer based in Kigali, Rwanda. I enjoy creating modern,
+                responsive, and user-friendly websites using HTML, CSS, and JavaScript. My journey in web development
+                started with a curiosity about how websites work, and it quickly became a passion.
+                I am constantly learning new technologies and improving my skills through personal projects, coding challenges, 
+                and open-source contributions. I enjoy solving problems, building creative solutions, and turning ideas into real digital experiences.
+                Recently, I have been contributing to open-source projects, collaborating with other developers, and gaining practical experience with Git and GitHub.
+                 My goal is to become a professional software developer and contribute to impact projects that help people and businesses.
+                When I am not coding, I enjoy spending time outdoors, learning new things, and exploring opportunities to grow both personally and professionally.
+
             </p>
-            <button class="portfolio-btn">GO TO PORTFOLIO</button>
+
         </div>
-    </div>
-    <span class="contact">
+    </section>
+
+   <section class="portfolio" id="portfolio">
+  <p class="section-subtitle">My Work</p>
+  <h2>Featured Projects</h2>
+  <p class="section-description">
+    Here are some projects I built while improving my frontend development skills.
+  </p>
+
+  <div class="projects">
+    <article class="project-card">
+      <span>HTML • CSS • JavaScript</span>
+      <h3>Speed Typing Game</h3>
+      <p>
+        A typing game that helps users practice speed and accuracy with dynamic words and score tracking.
+      </p>
+      <div class="project-links">
+        <a href=https://github.com/fraternebahirwe/Scripts-game target="_blank">Live Demo</a>
+        <a href="https://github.com/fraternebahirwe" target="_blank">GitHub</a>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <span>HTML • CSS</span>
+      <h3>Personal Portfolio</h3>
+      <p>
+        A clean and responsive personal website presenting my profile, skills, projects, and contact links.
+      </p>
+      <div class="project-links">
+        <a href="#" target="_blank">Explore Project</a>
+        <a href="https://github.com/fraternebahirwe" target="_blank">GitHub</a>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <span>Open Source • GitHub</span>
+      <h3>Open Source Contributions</h3>
+      <p>
+        UI improvements and small bug fixes contributed to open-source projects such as Open Source Kigali.
+      </p>
+      <div class="project-links">
+        <a href="https://github.com/fraternebahirwe" target="_blank">View Contributions</a>
+      </div>
+    </article>
+  </div>
+</section>
+    <section class="contact">
         <h1>Interested in doing a project together?</h1>
-        <button class="contact-btn">CONTACT ME</button>
-    </span>
+    </section>
+
     <footer>
         <div class="links">
-            <img src="cvlog.png" alt="Logo">
+            <img src="images/cvlog.png" alt="Logo">
+
             <ul class="links">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">PORTFOLIO</a></li>
-                <li><a href="#" id="contact_me">CONTACT ME</a></li>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="mailto:fraterne2023@gmail.com">CONTACT ME</a></li>
             </ul>
         </div>
+
         <div class="icon">
-            <img src="logo.png" class="icon" alt="github">
-            <img src="twitter.png" class="icon" alt="twitter">
-            <img src="linkedin.png" class="icon" alt="linkdin">
+            <a href="https://github.com/fraternebahirwe" target="_blank">
+                <img src="images/logo.png" class="icon" alt="github">
+            </a>
+
+            <a href="https://x.com/fratbahirwe" target="_blank">
+                <img src="images/twitter.png" class="icon" alt="twitter">
+            </a>
+
+            <a href="https://linkedin.com/in/fraternebahirwe" target="_blank">
+                <img src="images/linkedin.png" class="icon" alt="linkedin">
+            </a>
         </div>
     </footer>
+
 </body>
 </html>
+
