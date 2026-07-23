@@ -38,8 +38,8 @@
                     </div>
 
                     <div class="nav-right">
-                        <button class="theme-btn">
-                            <img src="img/sun.png" alt="Toggle light mode" id="theme-icon">
+                        <button class="theme-btn" aria-label="Toggle theme">
+                            <img src="img/sun.png" alt="" id="theme-icon" aria-hidden="true">
                         </button>
 
                         <button class="burger-btn" aria-label="Open menu">☰</button>
@@ -67,9 +67,8 @@
                     </div>
                 </div>
 
-                <div class="circle-loader">
+                <div class="circle-loader" aria-hidden="true">
                     <div class="circle-letters">
-                        
                         <span style="--i:1">O</span>
                         <span style="--i:2">P</span>
                         <span style="--i:3">E</span>
@@ -88,16 +87,13 @@
                         <span style="--i:19">E</span>
                         <span style="--i:20">S</span>
                         <span style="--i:22">•</span>
-
                     </div>
 
                     <div class="circle-center"></div>
                  </div>
             </section>
 
-
-
-            <section class="skills-marquee">
+            <section class="skills-marquee" aria-hidden="true">
                 <div class="track">
                     <span>HTML + CSS + JAVASCRIPT + GIT & GITHUB + RESPONSIVE DESIGN + DOM & EVENTS +
                     HTML + CSS + JAVASCRIPT + GIT & GITHUB + RESPONSIVE DESIGN + DOM & EVENTS +</span>
@@ -106,7 +102,7 @@
                 </div>
             </section>
 
-            <section class="about container" id="about" >
+            <section class="about container" id="about">
                 <p class="section-label">(01) — ABOUT ME</p>
                 <h2>Passionate about code, driven by growth,<br> and always learning.</h2>
 
@@ -124,7 +120,6 @@
                         </p>
 
                         <div class="about-info">
-
                             <div class="info-box">
                                 <span>BASED IN</span>
                                 <strong>Kigali, Rwanda</strong>
@@ -144,7 +139,6 @@
                                 <span>SPEAKS</span>
                                 <strong>EN · FR</strong>
                             </div>
-
                         </div>
                     </div>
                     <div class="about-image-box">
@@ -153,57 +147,57 @@
                 </article>
             </section>
 
-          <section class="skills container" id="skills">
+            <section class="skills container" id="skills">
                 <p class="section-label">(02) — SKILLS & TOOLS</p>
                 <h2>What I work with.</h2>
 
                 <div class="skills-grid">
                     <article class="skill-card">
-                    <h3>HTML <span>COMFORTABLE</span></h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="--level: 85%"></div>
-                    </div>
-                    <p>Building the structure that gives every website purpose and clarity.</p>
+                        <h3>HTML <span>COMFORTABLE</span></h3>
+                        <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="HTML level: 85%">
+                            <div class="skill-progress" style="--level: 85%"></div>
+                        </div>
+                        <p>Building the structure that gives every website purpose and clarity.</p>
                     </article>
 
                     <article class="skill-card">
-                    <h3>CSS <span>COMFORTABLE</span></h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="--level: 80%"></div>
-                    </div>
-                    <p>Crafting clean, responsive, and visually engaging user experiences.</p>
+                        <h3>CSS <span>COMFORTABLE</span></h3>
+                        <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="CSS level: 80%">
+                            <div class="skill-progress" style="--level: 80%"></div>
+                        </div>
+                        <p>Crafting clean, responsive, and visually engaging user experiences.</p>
                     </article>
 
                     <article class="skill-card">
-                    <h3>JavaScript <span>LEARNING</span></h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="--level: 55%"></div>
-                    </div>
-                    <p>Adding interactivity and bringing ideas to life through code.</p>
+                        <h3>JavaScript <span>LEARNING</span></h3>
+                        <div class="skill-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript level: 55%">
+                            <div class="skill-progress" style="--level: 55%"></div>
+                        </div>
+                        <p>Adding interactivity and bringing ideas to life through code.</p>
                     </article>
 
                     <article class="skill-card">
-                    <h3>Git & GitHub <span>PRACTICING</span></h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="--level: 60%"></div>
-                    </div>
-                    <p>Commit, branches, and shipping work where people can see it.</p>
+                        <h3>Git & GitHub <span>PRACTICING</span></h3>
+                        <div class="skill-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="Git and GitHub level: 60%">
+                            <div class="skill-progress" style="--level: 60%"></div>
+                        </div>
+                        <p>Commit, branches, and shipping work where people can see it.</p>
                     </article>
 
                     <article class="skill-card">
-                    <h3>Responsive <span>LEARNING</span></h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="--level: 70%"></div>
-                    </div>
-                    <p>Designing layouts that feel right from phone to desktop.</p>
+                        <h3>Responsive <span>LEARNING</span></h3>
+                        <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Responsive design level: 70%">
+                            <div class="skill-progress" style="--level: 70%"></div>
+                        </div>
+                        <p>Designing layouts that feel right from phone to desktop.</p>
                     </article>
 
                     <article class="skill-card">
-                    <h3>Problem solving <span>ALWAYS ON</span></h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="--level: 90%"></div>
-                    </div>
-                    <p>Breaking big problems into small, finishable pieces.</p>
+                        <h3>Problem solving <span>ALWAYS ON</span></h3>
+                        <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Problem solving level: 90%">
+                            <div class="skill-progress" style="--level: 90%"></div>
+                        </div>
+                        <p>Breaking big problems into small, finishable pieces.</p>
                     </article>
                 </div>
             </section>
@@ -218,6 +212,7 @@
                     <button class="filter-btn">CSS</button>
                     <button class="filter-btn">JavaScript</button>
                 </div>
+
                 <div class="projects-grid">
                     <article class="project-card" data-category="javascript">
                         <div class="project-image">
@@ -226,7 +221,7 @@
                         </div>
                         <div class="project-content">
                             <h3>
-                                <a href="https://github.com/fraternebahirwe/Scripts-game" target="_blank" class="project-link">
+                                <a href="https://github.com/fraternebahirwe/Scripts-game" target="_blank" rel="noopener noreferrer" class="project-link">
                                     <span>Speed Typing Game ⚡</span>
                                     <span class="arrow">↗</span>
                                 </a>
@@ -248,7 +243,7 @@
                         </div>
                         <div class="project-content">
                             <h3>
-                                <a href="https://github.com/fraternebahirwe/conferencewebpage" target="_blank" class="project-link">
+                                <a href="https://github.com/fraternebahirwe/conferencewebpage" target="_blank" rel="noopener noreferrer" class="project-link">
                                     <span>Tech Conference Website</span>
                                     <span class="arrow">↗</span>
                                 </a>
@@ -269,7 +264,7 @@
                         </div>
                         <div class="project-content">
                             <h3>
-                                <a href="https://github.com/fraternebahirwe/myportfolio" target="_blank" class="project-link">
+                                <a href="https://github.com/fraternebahirwe/myportfolio" target="_blank" rel="noopener noreferrer" class="project-link">
                                     <span>Developer Portfolio</span>
                                     <span class="arrow">↗</span>
                                 </a>
@@ -291,7 +286,7 @@
                         </div>
                         <div class="project-content">
                             <h3>
-                                <a href="https://github.com/fraternebahirwe/osk-frontend" target="_blank" class="project-link">
+                                <a href="https://github.com/fraternebahirwe/osk-frontend" target="_blank" rel="noopener noreferrer" class="project-link">
                                     <span>Open Source Kigali</span>
                                     <span class="arrow">↗</span>
                                 </a>
@@ -320,48 +315,50 @@
 
                     <div class="contact-links">
                         <a href="mailto:fraterneiragibahirwe@gmail.com">
-                        <span>EMAIL</span>
-                        <img src="img/envelope.png" alt="Email">
-                        fraterneiragibahirwe@gmail.com
+                            <span>EMAIL</span>
+                            <img src="img/envelope.png" alt="" aria-hidden="true">
+                            fraterneiragibahirwe@gmail.com
                         </a>
 
-                        <a href="https://github.com/fraternebahirwe" target="_blank">
-                        <span>GITHUB</span>
-                        <img src="img/github.png" alt="GitHub">
-                        fraternebahirwe
+                        <a href="https://github.com/fraternebahirwe" target="_blank" rel="noopener noreferrer">
+                            <span>GITHUB</span>
+                            <img src="img/github.png" alt="" aria-hidden="true">
+                            fraternebahirwe
                         </a>
 
-                        <a href="https://www.linkedin.com/in/fraternebahirwe/" target="_blank">
-                        <span>LINKEDIN</span>
-                        <img src="img/linkedin.png" alt="LinkedIn">
-                        fraternebahirwe
+                        <a href="https://www.linkedin.com/in/fraternebahirwe/" target="_blank" rel="noopener noreferrer">
+                            <span>LINKEDIN</span>
+                            <img src="img/linkedin.png" alt="" aria-hidden="true">
+                            fraternebahirwe
                         </a>
                     </div>
                 </div>
+
                 <form class="contact-form" action="https://formspree.io/f/mgobdvww" method="POST">     
                     <div class="field">
                         <label for="name">YOUR NAME</label>
-                        <input id="name" name="name"type="text" placeholder="Your Name" required>
+                        <input id="name" name="name" type="text" placeholder="Your Name" required>
                         <p class="error-message"><strong>Please enter your name</strong></p>
                     </div>
 
                     <div class="field">
                         <label for="email">EMAIL</label>
-                        <input id="email" name="email"type="email" placeholder="Your Email" required>
-                        <p class="error-message"><strong> Enter a valid email address</strong></p>
+                        <input id="email" name="email" type="email" placeholder="Your Email" required>
+                        <p class="error-message"><strong>Enter a valid email address</strong></p>
                     </div>
 
                     <div class="field">
                         <label for="message">MESSAGE</label>
-                        <textarea id="message"name="message" placeholder="Your Message" minlength="10" required></textarea>
+                        <textarea id="message" name="message" placeholder="Your Message" minlength="10" required></textarea>
                         <p class="error-message"><strong>A little more detail, please (12+ chars)</strong></p>
                     </div>
 
-                    <button type="submit">Send message <img src="img/send.png"></button>
+                    <button type="submit">
+                        Send message <img src="img/send.png" alt="" aria-hidden="true">
+                    </button>
                     <p id="form-success" style="display: none; color: rgb(46, 188, 46); font-weight: bold; margin-top: 10px;">
                         Your message was submitted 👍🏼!
                     </p>
-
                 </form>
             </section>
 
@@ -370,19 +367,19 @@
                     <h2 class="footer-title">LET'S BUILD.</h2>
                     <div class="footer-bottom">
                         <div class="socials">
-                            <a href="https://github.com/fraternebahirwe" target="_blank">
-                                <img src="img/github.png" alt="GitHub">
+                            <a href="https://github.com/fraternebahirwe" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                                <img src="img/github.png" alt="" aria-hidden="true">
                             </a>
 
-                            <a href="https://www.linkedin.com/in/fraternebahirwe" target="_blank">
-                                <img src="img/linkedin.png" alt="LinkedIn">
+                            <a href="https://www.linkedin.com/in/fraternebahirwe" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                                <img src="img/linkedin.png" alt="" aria-hidden="true">
                             </a>
 
-                            <a href="mailto:fraterneiragibahirwe@gmail.com">
-                                <img src="img/envelope.png" alt="Email">
+                            <a href="mailto:fraterneiragibahirwe@gmail.com" aria-label="Send Email">
+                                <img src="img/envelope.png" alt="" aria-hidden="true">
                             </a>
                         </div>
-                        <p><Span class="copy">© 2026 Fraterne Bahirwe — Built with </Span>  HTML • CSS • JS</p>
+                        <p><span class="copy">© 2026 Fraterne Bahirwe — Built with </span>  HTML • CSS • JS</p>
                     </div>
                 </div>
             </footer>
