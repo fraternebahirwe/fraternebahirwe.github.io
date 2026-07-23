@@ -3,6 +3,7 @@ const themeBtn = document.querySelector(".theme-btn");
 const themeIcon = document.querySelector("#theme-icon");
 const savedTheme = localStorage.getItem("theme");
 
+// Application initiale du thème sauvegardé
 if (savedTheme === "light") {
   document.body.classList.add("light-mode");
   if (themeIcon) themeIcon.src = "img/moon.png";
@@ -11,6 +12,7 @@ if (savedTheme === "light") {
   if (themeIcon) themeIcon.src = "img/sun.png";
 }
 
+// Bascule au clic sur le bouton
 if (themeBtn && themeIcon) {
   themeBtn.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
@@ -28,20 +30,20 @@ if (themeBtn && themeIcon) {
 // --- GESTION DU MENU BURGER & DRAWER MOBILE ---
 const burgerBtn = document.querySelector(".burger-btn");
 const navLinks = document.querySelector(".nav-links");
-const allLinks = document.querySelectorAll(".nav-links a"); // AJOUT : Cible tous vos liens
+const allLinks = document.querySelectorAll(".nav-links a");
 
 if (burgerBtn && navLinks) {
-  // Ouverture / Fermeture manuelle avec le bouton
+  // Ouverture / Fermeture manuelle
   burgerBtn.addEventListener("click", () => {
     navLinks.classList.toggle("active");
     burgerBtn.textContent = navLinks.classList.contains("active") ? "×" : "☰";
   });
 
-  // AJOUT ESSENTIEL : Fermeture automatique du tiroir au clic sur un lien
+  // Fermeture automatique lors du clic sur un lien du menu
   allLinks.forEach(link => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("active");
-      burgerBtn.textContent = "☰"; // Réinitialise l'icône burger immédiatement
+      burgerBtn.textContent = "☰";
     });
   });
 }
@@ -52,13 +54,23 @@ const projectCards = document.querySelectorAll(".project-card");
 
 filterBtns.forEach(btn => {
   btn.addEventListener("click", () => {
-    filterBtns.forEach(button => button.classList.remove("active"));
+    // 1. Réinitialisation des classes et attributs ARIA
+    filterBtns.forEach(button => {
+      button.classList.remove("active");
+      button.setAttribute("aria-selected", "false");
+    });
+
+    // 2. Activation du bouton cliqué
     btn.classList.add("active");
+    btn.setAttribute("aria-selected", "true");
 
-    const category = btn.textContent.toLowerCase();
+    const category = btn.textContent.trim().toLowerCase();
 
+    // 3. Filtrage tolérant / inclusif des cartes
     projectCards.forEach(card => {
-      if (category === "all" || card.dataset.category === category) {
+      const cardCategory = card.dataset.category ? card.dataset.category.toLowerCase() : "";
+
+      if (category === "all" || cardCategory.includes(category)) {
         card.style.display = "";
       } else {
         card.style.display = "none";
@@ -72,6 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".contact-form");
   if (!form) return;
 
+  // Marque le formulaire pour afficher les styles CSS d'erreur au premier essai invalide
   form.addEventListener("invalid", () => { form.classList.add("submitted"); }, true);
 
   form.addEventListener("submit", (e) => {
@@ -90,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then(response => {
       if (response.ok) {
-        successMessage.style.display = "block";
+        if (successMessage) successMessage.style.display = "block";
         form.reset();
         form.classList.remove("submitted");
       } else {
@@ -108,29 +121,23 @@ const words = ["HTML, CSS & JS responsive web sites.", "JavaScript apps.", "clea
 const elem = document.getElementById("changing-text");
 let word = 0, char = 0, del = false;
 
-if (elem) { // Sécurité : évite de planter si l'élément n'est pas chargé
+if (elem) {
   (function type() {
-      const cur = words[word];
-      char += del ? -1 : 1;
-      elem.textContent = cur.substring(0, char);
+    const cur = words[word];
+    char += del ? -1 : 1;
+    elem.textContent = cur.substring(0, char);
 
-      let speed = del ? 50 : 100;
+    let speed = del ? 50 : 100;
 
-      if (!del && char === cur.length) { 
-        speed = 2000; 
-        del = true; 
-      } else if (del && char === 0) { 
-        del = false; 
-        word = (word + 1) % words.length; 
-        speed = 400; 
-      }
+    if (!del && char === cur.length) { 
+      speed = 2000; 
+      del = true; 
+    } else if (del && char === 0) { 
+      del = false; 
+      word = (word + 1) % words.length; 
+      speed = 400; 
+    }
 
-      setTimeout(type, speed);
+    setTimeout(type, speed);
   })();
 }
-
-
-
-
-
-
