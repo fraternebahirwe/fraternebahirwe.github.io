@@ -40,8 +40,6 @@ main {
   padding-top: 110px;
 }
 
-
-
 a {
   text-decoration: none;
   font-size: 12px;
@@ -78,7 +76,6 @@ a {
   align-items: center;
   padding: 15px 0;
   background: var(--primary-color);
-  
 }
 
 header {
@@ -90,7 +87,6 @@ header {
   background: var(--primary-color);
   border-bottom: 1px solid var(--border-color);
 }
-
 
 .logo {
   background: var(--secondary-color);
@@ -108,20 +104,23 @@ header {
   position: relative;
 }
 
-.nav-links a {
+.nav-links a,
+.nav-link {
   text-decoration: none;
   color: var(--text-color);
   font-size: 15px;
   padding: 3px 7px;
   position: relative;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, font-weight 0.2s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-link:hover {
   color: var(--secondary-color);
 }
 
-.nav-links a::before {
+.nav-links a::before,
+.nav-link::before {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -132,8 +131,15 @@ header {
   transition: all 0.3s ease;
 }
 
-.nav-links a:hover::before {
+.nav-links a:hover::before,
+.nav-link:hover::before {
   width: 100%;
+}
+
+/* CLICKED / ACTIVE LINK BOLD STATE */
+.nav-link.active {
+  font-weight: 700;
+  color: var(--secondary-color);
 }
 
 html {
@@ -265,7 +271,6 @@ h2{
   padding: 10px 15px;
   transition: transform 0.3s ease;
   font-size: 18px;
-
 }
 
 .btn-primary {
@@ -290,25 +295,20 @@ h2{
   color: var(--primary-color);
 }
 
-
 .filter button:hover {
   color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
-
+  border: 1px solid var(--secondary-color);
 }
 
 .filter-btn.active {
   background: var(--secondary-color);
   color:var(--primary-color);
-   border: 1px solid var(--secondary-color);
-
- 
+  border: 1px solid var(--secondary-color);
 }
 
 .filter-btn.active:hover {
-color:var(--primary-color);
+  color:var(--primary-color);
 }  
-
 
 /* CIRCLE */
 .circle-loader {
@@ -408,7 +408,6 @@ color:var(--primary-color);
   gap: 50px;
 }
 
-
 .about-text {
   flex: 1;
 }
@@ -453,6 +452,7 @@ color:var(--primary-color);
   object-position: center top;
   border-radius: 12px;
 }
+
 /* SKILLS */
 .skills-grid,
 .projects-grid,
@@ -473,14 +473,11 @@ color:var(--primary-color);
 .skill-card {
   border: 1px solid var(--border-color);
   padding: 24px;
-
 }
-
 
 .skill-card:hover {
   background-color: var(--dark-border);
 }
-
 
 .skill-card h3 {
   display: flex;
@@ -491,8 +488,6 @@ color:var(--primary-color);
 .skill-card h3 span {
   font-size: 10px;
   color: var(--text-color);
- 
-
 }
 
 .skill-bar {
@@ -519,7 +514,6 @@ color:var(--primary-color);
   }
 }
 
-
 /* --- PROJECTS --- */
 .filter {
   gap: 10px;
@@ -543,12 +537,11 @@ color:var(--primary-color);
   gap: 40px;
 }
 .project-content span{
-    font-size: 30px;
-   
+  font-size: 30px;
 }
 
 .project-card {
-  position: relative; /* Indispensable pour positionner le lien invisible */
+  position: relative;
   border: 1px solid var(--border-color);
   border-radius: 10px;
   background: var(--primary-color);
@@ -556,13 +549,11 @@ color:var(--primary-color);
   transition: 0.6s, transform 0.3s;
 }
 
-/* Effet au survol de TOUTE la carte */
 .project-card:hover {
   box-shadow: 14px 12px 0 var(--secondary-color);
   transform: translateY(-4px);
 }
 
-/* Déclenche l'animation de la flèche quand on survole la carte */
 .project-card:hover .arrow {
   transform: translate(4px, -4px);
 }
@@ -591,7 +582,7 @@ color:var(--primary-color);
 .arrow{
   height: 50px;
 }
-/* Zone invisible qui s'étend sur toute la carte */
+
 .project-link::after {
   content: "";
   position: absolute;
@@ -602,7 +593,6 @@ color:var(--primary-color);
   z-index: 1;
 }
 
-/* Permet aux boutons de rester cliquables individuellement si besoin */
 .project-content button {
   position: relative;
   z-index: 2;
@@ -649,7 +639,6 @@ color:var(--primary-color);
   border-radius: 12px;
 }
 
-
 /* LIGHT MODE FIXES */
 body.light-mode .skill-card,
 body.light-mode .project-card {
@@ -687,35 +676,30 @@ body.light-mode .tags span {
   border: 1px solid #dcdcdc;
 }
 
-/* Hover des boutons filter*/
-/* Boutons filter en light mode */
 body.light-mode .filter button {
   background: transparent;
   color: rgb(97, 95, 95);
   border: 1px solid #dcdcdc;
 }
 
-/* Hover: seulement la bordure et le texte deviennent noirs */
 body.light-mode .filter button:hover {
   background: transparent;
   color: black;
   border: 1px solid black;
 }
 
-/* Bouton selectionne apres le clic */
 body.light-mode .filter-btn.active {
   background: black;
   color: white;
   border: 1px solid black;
 }
 
-/* Quand le bouton selectionne est survole */
 body.light-mode .filter-btn.active:hover {
   background: black;
   color: white;
   border: 1px solid black;
 }
-/* Contact inputs */
+
 body.light-mode .contact-form input,
 body.light-mode .contact-form textarea {
   background: #f5f5f5;
@@ -723,7 +707,6 @@ body.light-mode .contact-form textarea {
   border: 1px solid #dcdcdc;
 }
 
-/* Bordures plus douces */
 body.light-mode .info-box,
 body.light-mode .skill-card,
 body.light-mode .project-card,
@@ -738,7 +721,6 @@ body.light-mode .socials a:hover img {
 body.light-mode .copy{
   color: var(--dark-border);
 }
-
 
 /* CONTACT */
 .contact {
@@ -840,7 +822,6 @@ body.light-mode .copy{
   font-size: 15px;
   margin: 8px 0 0;
   font-family: "Courier New", Courier, monospace;
-  
 }
 
 .contact-form.submitted input:invalid,
@@ -852,6 +833,7 @@ body.light-mode .copy{
 .contact-form.submitted textarea:invalid + .error-message {
   display: block;
 }
+
 /* FOOTER */
 .footer {
   border-top: 1px solid var(--border-color);
@@ -860,9 +842,9 @@ body.light-mode .copy{
 
 .footer-title {
   font-size: 120px;
-  line-height: 1; /* Aligne la hauteur de la ligne sur la taille du texte pour enlever l'excédent en bas */
+  line-height: 1;
   margin: 0;
-  padding-bottom: 40px; /* Contrôle précis de l'espace du bas */
+  padding-bottom: 40px;
   width: 100%;
   text-align: center;
   display: flex;
@@ -870,6 +852,7 @@ body.light-mode .copy{
   align-items: center;
   border-bottom: 1px solid var(--border-color);
 }
+
 .copy{
   color: var(--text-color);
   letter-spacing: 2px;
@@ -895,11 +878,10 @@ body.light-mode .copy{
 .socials a:hover {
   transform: translateY(-3px);
   background-color: var(--secondary-color);
-
 }
 
 .socials a:hover img {
-  filter:  brightness(0);
+  filter: brightness(0);
 }
 
 /* RESPONSIVE SUB-768px (Tablettes et Mobiles) */
@@ -907,7 +889,6 @@ body.light-mode .copy{
   .container {
     padding:0 20px;
   }
-
 
   main {
     padding-top: 60px;
@@ -926,7 +907,6 @@ body.light-mode .copy{
     flex-shrink: 0;
   }
 
-  
   .nav-name span:first-child {
     font-size: 14px;
     display: block;
@@ -966,7 +946,8 @@ body.light-mode .copy{
     max-height: 370px;
   }
 
-  .nav-links a {
+  .nav-links a,
+  .nav-link {
     display: block;
     padding: 15px 15px;
     font-size: 24px;
@@ -978,28 +959,25 @@ body.light-mode .copy{
     margin: 0;
   }
 
-
-
   /* --- Section Hero --- */
   .hero {
     display: block;
   }
 
-  /* Ajustement du titre d'introduction général (ex: "Hello, I'm") */
   .hero p, .hero .intro-text {
     font-size: 11px;
     margin-bottom: 15px;
   }
 
   h1,h2{
-    font-size: 30px; /* Légèrement réduit pour éviter les coupures */
+    font-size: 30px;
     letter-spacing: -1px;
   }
+
   .hero .build {
     font-size: 18px;
   }
 
-  /* CORRECTION : Boutons superposés par défaut sous 768px */
   .hero-buttons {
     display: flex;
     flex-direction: column;
@@ -1069,11 +1047,12 @@ body.light-mode .copy{
     height: 100%;
     object-fit: contain;
   }
-.contact-form input,
+
+  .contact-form input,
   .contact-form textarea {
     font-size: 16px !important;
   }
-  /* --- CORRECTION : Visibilité du Footer --- */
+
   footer {
     padding: 40px 0;
     width: 100%;
@@ -1086,27 +1065,26 @@ body.light-mode .copy{
     text-align: center;
     width: 100%;
   }
-.footer h2 {
-  font-size: 60px;
-  display: flex;
+
+  .footer h2 {
+    font-size: 60px;
+    display: flex;
   }
 
   .contact-form button {
-  width: 100%;
-  height:50px;
-  transition: transform 0.3s ease;
-}
+    width: 100%;
+    height:50px;
+    transition: transform 0.3s ease;
+  }
 
-.contact-form button img {
-  width: 20px;
-  height: 15px;
-}
-
+  .contact-form button img {
+    width: 20px;
+    height: 15px;
+  }
 }
 
 /* RESPONSIVE SUB-480px (Smartphones) */
 @media (max-width: 480px) {
-  /* Ajustement précis du titre "Fraterne Bahirwe" */
   .nav-name span:last-child {
     font-size: 13px;
   }
@@ -1121,14 +1099,13 @@ body.light-mode .copy{
     padding: 7px 9px;
   }
 
-  /* CORRECTION FINALE : Maintient les boutons l'un sous l'autre sur très petit écran */
   .hero-buttons {
     flex-direction: column;
     align-items: stretch;
   }
 
   h1 {
-    font-size: 40px; /* Plus adapté aux petits écrans */
+    font-size: 40px;
   }
 
   .about-image-box {
@@ -1137,6 +1114,6 @@ body.light-mode .copy{
 
   .typed-cursor, 
   [class*="cursor"] {
-    font-size: 18px !important;    /* Force la taille à correspondre à votre texte réduit */
+    font-size: 18px !important;
   }
 }

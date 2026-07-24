@@ -27,6 +27,42 @@ if (themeBtn && themeIcon) {
   });
 }
 
+// --- GESTION DES LIENS DE NAVIGATION (ACTIVE STATE & SCROLL-SPY) ---
+const navLinkElements = document.querySelectorAll(".nav-links a, .nav-link");
+const sections = document.querySelectorAll("section[id]");
+
+// Mise à jour de la classe active au clic
+navLinkElements.forEach(link => {
+  link.addEventListener("click", function () {
+    navLinkElements.forEach(l => l.classList.remove("active"));
+    this.classList.add("active");
+  });
+});
+
+// Détection de la section active lors du défilement (Scroll-Spy)
+window.addEventListener("scroll", () => {
+  let currentSectionId = "";
+  const scrollPosition = window.scrollY + 120; // Décalage pour le header fixe
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+
+    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+      currentSectionId = section.getAttribute("id");
+    }
+  });
+
+  if (currentSectionId) {
+    navLinkElements.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${currentSectionId}`) {
+        link.classList.add("active");
+      }
+    });
+  }
+});
+
 // --- GESTION DU MENU BURGER & DRAWER MOBILE ---
 const burgerBtn = document.querySelector(".burger-btn");
 const navLinks = document.querySelector(".nav-links");
